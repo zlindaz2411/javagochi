@@ -12,6 +12,19 @@ public class Creature {
 
         this.name = name;
     }
+
+    public void eat(){
+        if(fullness >= 12){
+            print("Woops" + this.getName() + "is already full");}
+        else {
+            fullness += 8;
+            happiness -= 6;
+            energy -= 4;
+
+            if (fullness > 15) {fullness = 15;}
+            print("Yum" + this.getName() + "really enjoyed that!");
+        }
+    }
     public void sleep(){
         if(energy >= 12){
             print("Woops" + this.getName() + "is not that sleepy");}
@@ -27,18 +40,7 @@ public class Creature {
         }
     }
 
-    public void eat(){
-        if(fullness >= 12){
-            print("Woops" + this.getName() + "is already full");}
-        else {
-            fullness += 8;
-            happiness -= 6;
-            energy -= 4;
 
-            if (fullness > 15) {fullness = 15;}
-            print("Yum" + this.getName() + "really enjoyed that!");
-            }
-        }
 
     public void play(){
 
